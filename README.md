@@ -32,7 +32,7 @@ Web yang saya buat ini adalah sebuah buku nota digital
 
 
 ### ERD
-![ERD](https://github.com/(namauser)/(namarepo)/blob/main/erd.png.png)
+![ERD](https://raw.githubusercontent.com/ambel77777/UjikomAmbel/refs/heads/main/erdMel.png)
 
 ### UML
 ![UML](https://github.com/(namauser)/(namarepo)/blob/main/uml.png.png)
