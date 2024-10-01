@@ -27,7 +27,7 @@ Web yang saya buat adalah Web Buku Tamu
 ![ERD](https://raw.githubusercontent.com/ambel77777/UjikomAmbel/refs/heads/main/erdMel.png)
 
 ### UML
-![UML](https://raw.githubusercontent.com/ambel77777/UjikomAmbel/refs/heads/main/umlMel.png)
+![UML](https://raw.githubusercontent.com/ambel77777/UjikomAmbel/refs/heads/main/melUml.png)
 Tabel Failed_Jobs,
 Personal_access_tokens,
 Password_reset_tokens,migration di abaikan saja karena bawaan laravel
