@@ -2,7 +2,7 @@
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Data Buku Tamu</h1>
-        <a href="{{ route('products.create') }}" class="btn btn-primary">Tambah</a>
+        <a href="{{ route('products.create') }}" class="btn btn-primary bg-success">Tambah</a>
     </div>
     <hr />
     @if(Session::has('success'))
@@ -20,6 +20,7 @@
                 <th>Tujuan</th>
                 <th>Penerima</th>
                 <th>No Telpon</th>
+                <th class="text-center">Aksi</th>
             </tr>
         </head>
         <tbody>
@@ -33,7 +34,7 @@
                         <td class="align-middle">{{ $rs->tujuan }}</td>
                         <td class="align-middle">{{ $rs->penerima }}</td>
                         <td class="align-middle">{{ $rs->no_telpon }}</td>  
-                        <td class="align-middle">
+                        <td class="align-middle text-center">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="{{ route('products.show', $rs->id) }}" type="button" class="btn btn-secondary">Rincian</a>
                                 <a href="{{ route('products.edit', $rs->id)}}" type="button" class="btn btn-warning">Ubah</a>

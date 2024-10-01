@@ -2,14 +2,26 @@
   
 namespace App\Http\Controllers;
   
-use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
  
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function dashboard()
+    {
+          // Jumlah input hari ini
+        $todayCount = Product::whereDate('tanggal', Carbon::today())->count();
+        // Jumlah input kemarin
+        $yesterdayCount = Product::whereDate('tanggal', Carbon::yesterday())->count();
+        // Jumlah input bulan ini
+        $thisMonthCount = Product::whereMonth('tanggal', Carbon::now()->month)
+                                ->whereYear('tanggal', Carbon::now()->year)
+                                ->count();
+        // Jumlah input keseluruhan
+        $totalCount = Product::count();
+        return view('dashboard', compact('todayCount', 'yesterdayCount', 'thisMonthCount', 'totalCount'));
+    }
     public function index()
     {
         $product = Product::orderBy('created_at', 'DESC')->get();

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Product;
  
 use Illuminate\Database\Eloquent\Casts\Attribute;
  
@@ -24,6 +25,11 @@ class User extends Authenticatable
         'password',
         'type'
     ];
+
+    public function product()
+    {
+        return $this->hasOne(Product::class, 'product_id','id');
+    }
  
     protected function type(): Attribute
     {

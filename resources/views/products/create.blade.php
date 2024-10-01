@@ -1,42 +1,50 @@
 @extends('layouts.app')
 @section('contents')
-<h1 class="font-bold text-2xl ml-3"></h1>
-<hr />
-<div class="border-b border-gray-900/10 pb-12">
-    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            </div>
-            <div class="form-group mb-3">
-			      			<label class="label">tanggal</label>
-			      			<input type="date" name="date" class="form-control" placeholder="Isilah Tanggal" required>
-			      		</div>
-		            <div class="form-group mb-3">
-		            	<label class="label">nama</label>
-		              <input type="text" name="nama" class="form-control" placeholder="Isilah Nama Anda" required>
-		            </div>
-					<div class="form-group mb-3">
-		            	<label class="label">instansi/lembaga</label>
-					 <input type="text" class="form-control" name="instansi_lembaga" placeholder="Isilah Instansi/Lembaga Anda" required>
-						</div>
-					<div class="form-group mb-3">
-		            	<label class="label">tujuan</label>
-		              <input type="text" class="form-control" name="tujuan" placeholder="Isilah Tujuan Anda" required>
-		            </div>
-					<div class="form-group mb-3">
-		            	<label class="label">penerima</label>
-		              <input type="text" class="form-control" name="penerima" placeholder="Isilah Penerima Anda" required>
-		            </div>
-                    <div class="form-group mb-3">
-		            	<label class="label">no telpon</label>
-		              <input type="number" class="form-control" name="no_telpon" placeholder="Isilah No Telpon Anda" required>
-		            </div>
+
+<div class="container my-5">
+    <h1 class="font-weight-bold text-center mb-4">Formulir Pengisian Buku Tamu</h1>
+    <hr />
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                
+                <div class="form-group mb-4">
+                    <label for="date" class="form-label font-weight-bold">Tanggal</label>
+                    <input type="date" name="tanggal" class="form-control" placeholder="Isilah Tanggal" required>
                 </div>
-            </div>
-            <div class="form-group">
-		            <button type="submit" class="form-control btn btn-primary rounded submit px-3">simpan</button>
-		        </div>        
-        </form>
+                
+                <div class="form-group mb-4">
+                    <label for="nama" class="form-label font-weight-bold">Nama</label>
+                    <input type="text" name="nama" class="form-control" placeholder="Isilah Nama Anda" required>
+                </div>
+                
+                <div class="form-group mb-4">
+                    <label for="instansi_lembaga" class="form-label font-weight-bold">Instansi/Lembaga</label>
+                    <input type="text" class="form-control" name="instansi_lembaga" placeholder="Isilah Instansi/Lembaga Anda" required>
+                </div>
+                
+                <div class="form-group mb-4">
+                    <label for="tujuan" class="form-label font-weight-bold">Tujuan</label>
+                    <input type="text" class="form-control" name="tujuan" placeholder="Isilah Tujuan Anda" required>
+                </div>
+                
+                <div class="form-group mb-4">
+                    <label for="penerima" class="form-label font-weight-bold">Penerima</label>
+                    <input type="text" class="form-control" name="penerima" placeholder="Isilah Penerima Anda" required>
+                </div>
+                
+                <div class="form-group mb-4">
+                    <label for="no_telpon" class="form-label font-weight-bold">No Telpon</label>
+                    <input type="number" class="form-control" name="no_telpon" placeholder="Isilah No Telpon Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-warning btn-block font-weight-bold">Simpan</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 @endsection
