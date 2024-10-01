@@ -9,33 +9,25 @@
 
 ## Konsep Web Saya
 
-Web yang saya buat ini adalah sebuah buku nota digital
-
+Web yang saya buat adalah Web Buku Tamu
 
 ### Fitur Yang Tersedia
 
 
-- Halaman user (home)
-- Authentication(register,login)
-- Multi user(Admin : mengelola crud,database) (User)
+- Halaman user (Data Buku Tamu)
+- Authentication(register,login,logout)
+- Multi user(Admin : mengelola crud,database)
+- (User : mengisi data tamu)
 
-## Akun Default Untuk Pengujian
-
--Admin:
-    Email : admin@gmail.com
-    pasword : admin12
-
- -User:
-     Email : user@gmail.com
-     pasword : user12
-     
-
+## Akun Pengujian
+- Akun : Alhamdulillah12@gmail.com
+- pw : 123
 
 ### ERD
 ![ERD](https://raw.githubusercontent.com/ambel77777/UjikomAmbel/refs/heads/main/erdMel.png)
 
 ### UML
-![UML](https://github.com/(namauser)/(namarepo)/blob/main/uml.png.png)
+![UML](https://raw.githubusercontent.com/ambel77777/UjikomAmbel/refs/heads/main/umlMel.png)
 Tabel Failed_Jobs,
 Personal_access_tokens,
 Password_reset_tokens,migration di abaikan saja karena bawaan laravel
